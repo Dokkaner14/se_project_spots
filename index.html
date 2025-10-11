@@ -121,15 +121,12 @@
         </section>
       </main>
       <footer class="footer"><p class="footer__title">2025 spots</p></footer>
-      <div class="modal">
+      <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img
-              src="../se_project_spots/images/spots-images/close-icon.png"
-              alt="close button"
-            />
+            <img src="./images/spots-images/close-icon.png" alt="" />
           </button>
-          <h2 class="modal__title">Edit Profile</h2>
+          <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
             <label for="profile-name-input" class="modal__label"
               >Name
@@ -137,7 +134,7 @@
                 id="profile-name-input"
                 type="text"
                 class="modal__input"
-                placeholder="Type Your Name"
+                placeholder="Type your name"
               />
             </label>
             <label for="profile-description-input" class="modal__label"
@@ -146,25 +143,22 @@
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
-                placeholder="Describe Yourself"
+                placeholder="Describe yourself"
               />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-      <div class="modal">
+      <div class="modal" id="new-post-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img
-              src="../se_project_spots/images/spots-images/close-icon.png"
-              alt="close button"
-            />
+            <img src="./images/spots-images/close-icon.png" alt="" />
           </button>
-          <h2 class="modal__title">New Post</h2>
+          <h2 class="modal__title">New post</h2>
           <form class="modal__form">
             <label for="card-image-input" class="modal__label"
-              >image link
+              >Image link
               <input
                 id="card-image-input"
                 type="url"
@@ -172,10 +166,10 @@
                 placeholder="Place a link to the picture"
               />
             </label>
-            <label for="profile-caption-input" class="modal__label"
+            <label for="caption-description-input" class="modal__label"
               >Caption
               <input
-                id="profile-caption-input"
+                id="caption-description-input"
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
@@ -186,5 +180,6 @@
         </div>
       </div>
     </div>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
