@@ -14,10 +14,19 @@
   padding-bottom: 40px;
 }
 
-@media screen and (max-width: 627px) {
+@media screen and (max-width: 1320px) {
   .cards__list {
-    grid-template-columns: repeat(auto-fit, 288px);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 895px) {
+  .cards {
+    grid-row: 2;
     padding-bottom: 20px;
+  }
+  .cards__list {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
   }
 }

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="spots website" />
-    <meta name="author" content="spots" />
-    <meta name="keywords" content="HTML,CSS, grid" />
+    <meta name="description" content="Spots project" />
+    <meta name="author" content="Jose Soto" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Spots</title>
@@ -15,7 +15,7 @@
       <header class="header">
         <img
           src="./images/spots-images/Logo.svg"
-          alt="website logo"
+          alt="Spot logo"
           class="header__logo"
         />
       </header>
@@ -23,26 +23,25 @@
         <section class="profile page__section">
           <img
             src="./images/spots-images/avatar.jpg"
-            alt="spots avatar"
+            alt="Bessie Coleman"
             class="profile__avatar"
           />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
-            <p class="profile__description">Civil Aviator</p>
+            <p class="profile__description">Aviator</p>
             <button type="button" class="profile__edit-btn">
               <img
                 src="./images/spots-images/Edit-Icon.png"
-                alt="edit pencil"
-              />
-              Edit Profile
+                alt="Pencil icon"
+              />Edit Profile
             </button>
           </div>
-          <button class="profile__add-btn">
-            <img src="./images/spots-images/Plus-icon.png" alt="plus icon" />
-            New Post
+          <button type="button" class="profile__add-btn">
+            <img src="./images/spots-images/Plus-icon.png" alt="Plus icon" />New
+            Post
           </button>
         </section>
-        <section class="cards page__Section">
+        <section class="cards page__section">
           <ul class="cards__list">
             <li class="card">
               <img
@@ -55,49 +54,45 @@
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
-
             <li class="card">
               <img
                 src="./images/spots-images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="outdoor terrace"
+                alt="Restaurant terrace"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__title">Outdoor Terrace</h2>
+                <h2 class="card__title">Restaurant terrace</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
-
             <li class="card">
               <img
                 src="./images/spots-images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="an outdoor cafe"
+                alt="Outdoor cafe"
                 class="card__image"
               />
               <div class="card__content">
-                <h2 class="card__title">An Outdoor Cafe</h2>
+                <h2 class="card__title">An outdoor cafe</h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
-
             <li class="card">
               <img
                 src="./images/spots-images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="Val Thorens"
+                alt="Long bridge"
                 class="card__image"
               />
               <div class="card__content">
                 <h2 class="card__title">
-                  A very large bridge over the forest...
+                  A very, long bridge, over the forest
                 </h2>
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
-
             <li class="card">
               <img
                 src="./images/spots-images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Val Thorens"
+                alt="Tunnel with morning light"
                 class="card__image"
               />
               <div class="card__content">
@@ -105,11 +100,10 @@
                 <button type="button" class="card__like-btn"></button>
               </div>
             </li>
-
             <li class="card">
               <img
                 src="./images/spots-images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Val Thorens"
+                alt="Mountain house"
                 class="card__image"
               />
               <div class="card__content">
@@ -120,16 +114,21 @@
           </ul>
         </section>
       </main>
-      <footer class="footer"><p class="footer__title">2025 spots</p></footer>
+      <footer class="footer">
+        <p class="footer__copyright">2025 &copy; Spots</p>
+      </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn">
-            <img src="./images/spots-images/close-icon.png" alt="" />
+            <img
+              src="./images/spots-images/close-icon.png"
+              alt="close button"
+            />
           </button>
           <h2 class="modal__title">Edit profile</h2>
           <form class="modal__form">
-            <label for="profile-name-input" class="modal__label"
-              >Name
+            <label for="profile-name-input" class="modal__label">
+              Name
               <input
                 id="profile-name-input"
                 type="text"
@@ -137,8 +136,8 @@
                 placeholder="Type your name"
               />
             </label>
-            <label for="profile-description-input" class="modal__label"
-              >Description
+            <label for="profile-description-input" class="modal__label">
+              Description
               <input
                 id="profile-description-input"
                 type="text"
@@ -152,13 +151,16 @@
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-btn">
-            <img src="./images/spots-images/close-icon.png" alt="" />
+          <button type="button" id="add-close-btn" class="modal__close-btn">
+            <img
+              src="./images/spots-images/close-icon.png"
+              alt="close button"
+            />
           </button>
-          <h2 class="modal__title">New post</h2>
+          <h2 class="modal__title">New Post</h2>
           <form class="modal__form">
-            <label for="card-image-input" class="modal__label"
-              >Image link
+            <label for="card-image-input" class="modal__label">
+              Image link
               <input
                 id="card-image-input"
                 type="url"
@@ -166,10 +168,10 @@
                 placeholder="Place a link to the picture"
               />
             </label>
-            <label for="caption-description-input" class="modal__label"
-              >Caption
+            <label for="caption-image-input" class="modal__label">
+              Caption
               <input
-                id="caption-description-input"
+                id="caption-image-input"
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
