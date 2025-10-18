@@ -91,7 +91,7 @@ function handleAddCardSubmit(evt) {
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
-initialCards.foreach(function (item) {
+initialCards.forEach(function (item) {
   console.log(item.name);
   console.log(item.link);
 });
