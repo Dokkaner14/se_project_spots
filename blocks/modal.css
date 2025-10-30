@@ -1,58 +1,72 @@
 .modal {
+  opacity: 0;
   visibility: hidden;
   background-color: #00000080;
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  opacity: 0;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition: opacity 1.5s ease, visibility 0s ease 1.5s;
+}
+
+.modal_type_preview {
+  padding: 0 16px;
 }
 
 .modal_is-opened {
-  visibility: visible;
   opacity: 1;
-  transition-delay: 0s;
+  visibility: visible;
+  transition: opacity 1.5s ease;
 }
 
 .modal__container {
-  box-sizing: border-box;
   max-width: 730px;
   width: 100%;
   border-radius: 8px;
   background-color: #fff;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
-  background-image: url(../images/spots-images/close-icon.png);
-  padding: 0;
-  border: none;
-  background-color: #fff;
-  opacity: 40%;
+  background-image: url(../images/close-icon.svg);
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 32px;
   right: 50px;
-  width: 40px;
-  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
-  transition: opacity 0.3s;
+}
+
+.modal__close-btn_type_preview {
+  background-image: url(../images/close_white-icon.svg);
+  top: 0;
+  right: -50px;
+}
+
+.modal__close-btn_type_preview:hover {
+  cursor: pointer;
+  opacity: 40%;
 }
 
 .modal__close-btn:hover {
-  opacity: 100%;
+  cursor: pointer;
+  background-image: url(../images/closebtn_hover-icon.svg);
 }
 
 .modal__title {
   margin: 0 0 32px;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 32px;
+  line-height: 1;
+  font-weight: 500;
 }
 
 .modal__form {
@@ -62,66 +76,109 @@
 
 .modal__label {
   margin: 0 0 32px;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 110%;
-  letter-spacing: 0;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .modal__input {
-  box-sizing: border-box;
   display: block;
   margin: 8px 0 0;
-  width: 100%;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
+  line-height: 1;
+  font-weight: 500;
+  max-width: 630px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.4);
   border-radius: 8px;
-  border-color: rgba(33, 33, 33, 0.4);
   padding: 16px 12px;
 }
 
 .modal__input::placeholder {
-  color: #2121214d;
+  color: #21212166;
+  padding: 12px 16px 0px 12px;
+  font-size: 20px;
 }
 
 .modal__submit-btn {
   max-width: 156px;
   width: 100%;
-  padding: 18px 32px;
+  padding: 18px 0;
   border-radius: 8px;
-  border: none;
-  background-color: rgba(33, 33, 33, 1);
-  color: #fff;
-  cursor: pointer;
-  transition: opacity 0.3s;
+  background-color: #212121;
+  color: #fcf5e5;
+  font-size: 16px;
 }
 
 .modal__submit-btn:hover {
-  opacity: 100%;
+  cursor: pointer;
+  background-color: #000000 !important;
 }
 
+.modal__image-container {
+  position: relative;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  color: #fff;
+  border-radius: 8px;
+  background-color: #212121;
+  font-size: 20px;
+  width: fit-content;
+  padding: 4px 8px;
+}
 @media screen and (max-width: 627px) {
   .modal__container {
-    padding: 22px 12px 12px;
+    max-width: 300px;
+    width: 100%;
+    padding: 12px;
   }
 
   .modal__close-btn {
+    position: absolute;
     top: 12px;
     right: 12px;
   }
 
-  .modal__title {
-    font-size: 20px;
+  .modal__close-btn_type_preview {
+    top: -48px;
+    right: 0;
   }
 
+  .modal__title {
+    margin: 0 0 24px;
+    font-size: 20px;
+    padding: 10px 0px;
+  }
+
+  .modal__label {
+    margin: 0 0 24px;
+    font-size: 16px;
+  }
   .modal__input {
+    margin: 8px 0 0;
+    max-width: 300px;
+    width: 100%;
+  }
+  .modal__input::placeholder {
+    padding: 16px 12px 0px 16px;
     font-size: 16px;
   }
   .modal__submit-btn {
-    box-sizing: border-box;
-    max-width: none;
+    max-width: 300px;
     width: 100%;
+    font-size: 16px;
+  }
+  .modal__image {
+    max-width: unset;
   }
 }
