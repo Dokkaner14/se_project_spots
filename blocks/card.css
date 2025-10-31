@@ -11,6 +11,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .card__delete-btn {
@@ -52,13 +53,13 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 40%;
+  opacity: 0.4;
   padding: 0;
   margin: 12px 0 0;
 }
 
 .card__like-btn:hover {
-  opacity: 100%;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -70,7 +71,7 @@
 }
 
 .card__like-btn_active:hover {
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 

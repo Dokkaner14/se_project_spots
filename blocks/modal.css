@@ -34,7 +34,7 @@
 }
 
 .modal__close-btn {
-  background-image: url(../images/close-icon.svg);
+  background-image: url(../images/spots-images/close-icon.png);
   width: 40px;
   height: 40px;
   position: absolute;
@@ -47,14 +47,14 @@
 }
 
 .modal__close-btn_type_preview {
-  background-image: url(../images/close_white-icon.svg);
+  background-image: url(../images/spots-images/close-icon.png);
   top: 0;
   right: -50px;
 }
 
 .modal__close-btn_type_preview:hover {
   cursor: pointer;
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__close-btn:hover {
@@ -112,7 +112,7 @@
 
 .modal__submit-btn:hover {
   cursor: pointer;
-  background-color: #000000 !important;
+  background-color: #000000;
 }
 
 .modal__image-container {
@@ -123,7 +123,7 @@
   max-width: 80vw;
   max-height: 80vh;
   width: 100%;
-  object-fit: contain;
+  position: absolute;
   display: block;
   border-radius: 8px;
 }
