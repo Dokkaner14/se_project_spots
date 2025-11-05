@@ -46,13 +46,17 @@
   cursor: pointer;
 }
 
-.modal__close-btn_type_preview {
-  background-image: url(../images/spots-images/close-icon.png);
-  top: 0;
-  right: -50px;
+.modal__container_type_preview {
+  background-color: transparent;
 }
 
-.modal__close-btn_type_preview:hover {
+.modal__close_type_preview {
+  background-image: url(../images/spots-images/Close-icon-preview.png);
+  top: 40px;
+  right: 0px;
+}
+
+.modal__close_type_preview:hover {
   cursor: pointer;
   opacity: 0.4;
 }
@@ -60,6 +64,7 @@
 .modal__close-btn:hover {
   cursor: pointer;
   background-image: url(../images/closebtn_hover-icon.svg);
+  opacity: 40%;
 }
 
 .modal__title {
@@ -124,7 +129,6 @@
   max-width: 80vw;
   max-height: 80vh;
   width: 100%;
-  position: absolute;
   display: block;
   border-radius: 8px;
 }
