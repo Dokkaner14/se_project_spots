@@ -46,13 +46,10 @@
   cursor: pointer;
 }
 
-.modal__container_type_preview {
-  background-color: transparent;
-}
-
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   background-image: url(../images/spots-images/Close-icon-preview.png);
-  top: 40px;
+  top: 0px;
+  right: -40px;
   right: 0px;
 }
 
@@ -63,7 +60,6 @@
 
 .modal__close-btn:hover {
   cursor: pointer;
-  background-image: url(../images/closebtn_hover-icon.svg);
   opacity: 40%;
 }
 
@@ -140,12 +136,17 @@
   font-size: 20px;
   width: fit-content;
   padding: 4px 8px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
     width: 100%;
     padding: 12px;
+  }
+
+  .modal__caption {
+    font-size: 16px;
   }
 
   .modal__close-btn {
