@@ -3,147 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spots</title>
+    <meta name="description" content="spots project" />
     <meta name="author" content="Jose Soto" />
+    <meta
+      name="keywords"
+      content="spots, picture, pictures, photos, photo grid, picture grid"
+    />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/icon" href="./favicon.ico" />
+    <title>Spots</title>
   </head>
-
   <body>
     <div class="page">
       <header class="header">
         <img
           src="./images/spots-images/Logo.svg"
-          alt="Spot logo"
+          alt="spots arrow logo"
           class="header__logo"
         />
       </header>
-
       <main class="content">
         <section class="profile page__section">
           <img
             src="./images/spots-images/avatar.jpg"
-            alt="Bessie Coleman"
+            alt="Bessies Avatar"
             class="profile__avatar"
           />
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <button type="button" class="profile__edit-btn">
-              Edit profile
+            <button class="profile__edit-button" type="button">
+              <img
+                src="./images/spots-images/Edit-Icon.png"
+                alt="pencil icon"
+                class="profile__edit"
+              />Edit Profile
             </button>
           </div>
-
-          <button type="button" class="profile__add-btn">New post</button>
+          <button class="profile__add-button" type="button">
+            <img
+              src="./images/spots-images/Plus-icon.png"
+              alt="plus icon"
+              class="profile__add"
+            />New Post
+          </button>
         </section>
-
         <section class="cards page__section">
-          <ul class="cards__list"></ul>
-
-          <template id="card-template">
-            <li class="card">
-              <button class="card__delete-btn" type="button"></button>
-              <img
-                src="./images/spots-images/State=Default.png"
-                alt=""
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title"></h2>
-                <div class="card__buttons">
-                  <button type="button" class="card__like-btn"></button>
+          <ul class="cards__list">
+            <template id="card-template">
+              <li class="card">
+                <button class="card__delete-button" type="button"></button>
+                <img class="card__image" alt="image for card" />
+                <div class="card__footer">
+                  <h2 class="card__title"></h2>
+                  <button
+                    aria-label="Like card"
+                    class="card__like-button"
+                  ></button>
                 </div>
-              </div>
-            </li>
-          </template>
+              </li>
+            </template>
+          </ul>
         </section>
       </main>
-
-      <footer class="footer">
-        <p class="footer__copyright">© 2025 Jose Soto</p>
+      <footer class="footer page__section">
+        <p class="footer__copyright">2025 &copy; Ziah C</p>
       </footer>
-
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button
-            type="button"
-            class="modal__close-btn"
-            aria-label="Close modal"
-          ></button>
+          <button type="button" class="modal__close">
+            <img
+              src="./images/spots-images/Close-icon.png"
+              alt="close button"
+            />
+          </button>
           <h2 class="modal__title">Edit profile</h2>
-          <form class="modal__form" id="profile-form">
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label">
               Name
               <input
                 id="profile-name-input"
+                required
+                minlength="2"
+                maxlength="40"
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
-                required
               />
+              <span id="profile-name-input-error" class="modal__error"></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
               <input
                 id="profile-description-input"
+                required
+                minlength="2"
+                maxlength="200"
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
-                required
               />
+              <span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span>
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
       </div>
-
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button
-            type="button"
-            class="modal__close-btn"
-            aria-label="Close modal"
-          ></button>
-          <h2 class="modal__title">New post</h2>
-          <form class="modal__form" id="new-post-form">
+          <button type="button" class="modal__close">
+            <img
+              src="./images/spots-images/Close-icon.png"
+              alt="close button"
+            />
+          </button>
+          <h2 class="modal__title">New Post</h2>
+          <form class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label">
               Image link
               <input
                 id="card-image-input"
+                required
                 type="url"
                 class="modal__input"
-                placeholder="Place a link to the picture"
-                required
+                placeholder="Paste a link to the picture"
               />
+              <span id="card-image-input-error" class="modal__error"></span>
             </label>
-            <label for="card-caption-input" class="modal__label">
+            <label for="caption-input" class="modal__label">
               Caption
               <input
-                id="card-caption-input"
+                id="caption-input"
+                required
+                minlength="2"
+                maxlength="30"
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
-                required
               />
+              <span id="caption-input-error" class="modal__error"></span>
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-button">Save</button>
           </form>
         </div>
       </div>
-
-      <div class="modal modal_type_preview" id="preview-image-modal">
-        <div class="modal__image-container modal__container_type_preview">
+      <div class="modal modal_type_preview" id="preview-modal">
+        <div class="modal__image-container">
           <button
+            aria-label="close modal"
+            class="modal__close modal__close_type_preview"
             type="button"
-            class="modal__close-btn modal__close-btn_type_preview"
-            aria-label="Close preview"
-          ></button>
+          >
+            <img
+              src="./images/spots-images/Close-icon-preview.png"
+              alt="close-button"
+            />
+          </button>
           <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
         </div>
       </div>
     </div>
-
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
