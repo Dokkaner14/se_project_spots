@@ -29,7 +29,7 @@ const initialCards = [
   },
 ];
 
-// edit profile stuff //
+// JS code for edit profile modal //
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseButton = editProfileModal.querySelector(".modal__close");
 const editProfileForm = editProfileModal.querySelector(".modal__form");
