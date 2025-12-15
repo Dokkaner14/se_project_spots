@@ -103,18 +103,18 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function closeOnEscape(evt) {
+function handleEscapeKey(evt) {
   if (evt.key === "Escape") {
     const openModalEl = document.querySelector(".modal_is-opened");
-    if (openModal) {
-      closeModal(openModal);
+    if (openModalEl) {
+      closeModal(openModalEl);
     }
   }
 }
 
-function closeOnOverlay(event) {
-  if (event.target.classList.contains("modal")) {
-    closeModal(event.target);
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
   }
 }
 
