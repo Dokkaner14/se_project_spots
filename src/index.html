@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,15 +9,14 @@
       name="keywords"
       content="spots, picture, pictures, photos, photo grid, picture grid"
     />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="image/icon" href="./favicon.ico" />
+    <link rel="icon" type="image/icon" href="../src/images/favicon.ico" />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
         <img
-          src="./images/spots-images/Logo.svg"
+          src="<%=require('../src/images/spots-images/Logo.svg')%>"
           alt="spots arrow logo"
           class="header__logo"
         />
@@ -25,7 +24,7 @@
       <main class="content">
         <section class="profile page__section">
           <img
-            src="./images/spots-images/avatar.jpg"
+            src="<%=require('../src/images/spots-images/avatar.jpg')%>"
             alt="Bessies Avatar"
             class="profile__avatar"
           />
@@ -34,7 +33,7 @@
             <p class="profile__description">Civil Aviator</p>
             <button class="profile__edit-button" type="button">
               <img
-                src="./images/spots-images/Edit-Icon.png"
+                src="<%=require('../src/images/spots-images/Edit-Icon.png')%>"
                 alt="pencil icon"
                 class="profile__edit"
               />Edit Profile
@@ -42,7 +41,7 @@
           </div>
           <button class="profile__add-button" type="button">
             <img
-              src="./images/spots-images/Plus-icon.png"
+              src="<%=require('../src/images/spots-images/Plus-icon.png')%>"
               alt="plus icon"
               class="profile__add"
             />New Post
@@ -73,7 +72,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close">
             <img
-              src="./images/spots-images/Close-icon.png"
+              src="<%=require('../src/images/spots-images/Close-icon.png')%>"
               alt="close button"
             />
           </button>
@@ -116,7 +115,7 @@
         <div class="modal__container">
           <button type="button" class="modal__close">
             <img
-              src="./images/spots-images/Close-icon.png"
+              src="<%=require('../src/images/spots-images/Close-icon.png')%>"
               alt="close button"
             />
           </button>
@@ -158,7 +157,7 @@
             type="button"
           >
             <img
-              src="./images/spots-images/Close-icon-preview.png"
+              src="<%=require('../src/images/spots-images/Close-icon-preview.png')%>"
               alt="close-button"
             />
           </button>
@@ -167,7 +166,5 @@
         </div>
       </div>
     </div>
-    <script src="./scripts/validation.js"></script>
-    <script src="./scripts/index.js"></script>
   </body>
 </html>
